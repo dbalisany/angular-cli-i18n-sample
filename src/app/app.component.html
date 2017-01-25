@@ -1,5 +1,8 @@
-<h1 i18n>Hello World!</h1>
-<template ngFor let-lang [ngForOf]="languages">
-  <span *ngIf="lang.code !== localeId"><a href="/{{lang.code}}/">{{lang.label}}</a> </span>
-  <span *ngIf="lang.code === localeId">{{lang.label}} </span>
-</template>
+<h1 i18n="User welcome|An introduction header for this sample">Hello i18n!</h1>
+
+<localized-component>
+    <!-- Replacing the message inline doesn't work -->
+    <localized-component-messages hello="Здрасти">
+    </localized-component-messages>
+</localized-component>
+
