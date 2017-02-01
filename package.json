@@ -11,6 +11,7 @@
     "pree2e": "webdriver-manager update --standalone false --gecko false",
     "e2e": "protractor",
     "extract-i18n": "cd src && ng-xi18n",
+    "translate-i18n": "for lang in en es fr; do xlf-translate --messages-file=src/i18n/messages.$lang.xlf --lang-file=src/lang/$lang.yml; done",
     "build-i18n": "for lang in en es fr; do ng build -o dist/$lang --aot -prod --bh /$lang/ --i18n-file=src/i18n/messages.$lang.xlf --i18n-format=xlf --locale=$lang; done"
   },
   "private": true,
@@ -24,7 +25,6 @@
     "@angular/platform-browser-dynamic": "^2.3.1",
     "@angular/router": "^3.3.1",
     "core-js": "^2.4.1",
-    "localized-component": "git://github.com/tsvetomir/angular-localized-component.git",
     "rxjs": "^5.0.1",
     "ts-helpers": "^1.1.1",
     "zone.js": "^0.7.2"
@@ -45,6 +45,7 @@
     "protractor": "~4.0.13",
     "ts-node": "1.2.1",
     "tslint": "^4.0.2",
-    "typescript": "~2.0.3"
+    "typescript": "~2.0.3",
+    "xlf-translate": "0.1.0"
   }
 }

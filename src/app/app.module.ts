@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { LocalizedModule } from 'localized-component';
+import { LocalizedComponent } from './localized.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LocalizedComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
-    LocalizedModule
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
